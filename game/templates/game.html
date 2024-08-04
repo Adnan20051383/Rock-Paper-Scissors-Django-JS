@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="{% static 'CSS/game-style.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="game-menu">
+            <h1>Choose: Rock Paper or Scissors</h1>
+            <h2 id="numOfEfforts">Number Of Efforts Left : {{ numOfEfforts }}</h2>
+            <h2 id="numOfWins">Number Of Wins Needed : {{ numOfWins }}</h2>
+            <button id="rockBtn" class="btn" type="submit" onclick="makeDecision(1)"><img src="{% static 'img/1.png' %}"></button>
+            <button id="paperBtn" class="btn" type="submit" onclick="makeDecision(2)"><img src="{% static 'img/2.png' %}"></button>
+            <button id="scissors" class="btn" type="submit" onclick="makeDecision(3)"><img src="{% static 'img/3.png' %}"></button>
+            <div id="bot-choice"></div>
+            <div id="your-choice"></div>
+            <div id="temp-result"></div>
+            <h4 id="result"></h4>
+        </div>
+    </div>
+
+    <script src="{% static 'JS/app.js' %}"></script>
+</body>
+</html>

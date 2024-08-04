@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="{% static 'CSS/game-starter-style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="game-menu">
+            <h1>Let's Play The Game</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <label for="numOfEfforts"># of Efforts you want to make: </label>
+                <input type="number" min="1" value="1" name="numOfEfforts" id="numOfEfforts" required><br>
+                <label for="numOfWins"># of Wins you want : </label>
+                <input type="number" min="1" value="1" name="numOfWins" id="numOfWins" required><br>
+                <button type="submit">Submit</button>
+                <h4 id="error">{{ error }}</h4>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
